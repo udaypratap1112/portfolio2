@@ -2,7 +2,7 @@ import React from 'react'
 
 const Page4 = () => {
   return (
-      <div className='bg-inherit page stop w-screenh-fit  min-h-screen sm:h-screen  shrink-0 px-5 sm:px-10  flex flex-col justify-between pt-[100px] sm:pt-64'>
+      <div className='bg-inherit page stop w-screen  min-h-screen sm:h-screen  shrink-0 px-5 sm:px-10  flex flex-col justify-between pt-[100px] sm:pt-64'>
           <div className=' flex flex-col md:flex-row justify-between gap-10'>
           <h5 className='text-xl sm:text-2xl basis-1/3 '>Ready to level up your team? I'm all in!  If you're seeking someone who blends creativity with code and is driven to make an impact, let’s chat. </h5>
           
