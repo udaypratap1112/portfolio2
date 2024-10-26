@@ -37,7 +37,8 @@ const progress = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
   useEffect(() => {
     function handleResize() {
-      setSize(window.innerWidth)
+      // setSize(window.innerWidth)
+      window.location.reload()
     }
     if (container.current) {
       const pages = Array.from(container.current.querySelectorAll('.stop'))

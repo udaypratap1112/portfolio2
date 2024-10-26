@@ -40,7 +40,7 @@ const Page1 = ({ progress,size }) => {
   return (
     <div ref={divRef}  className=" page h-svh w-screen shrink-0 bg-leaves dark:bg-[#2d312a] overflow-hidden flex flex-col justify-between px-3 sm:px:10 pt-40 py-10"  style={{mask:'var(--headerMask)'}}>
      <div className="max-w-[800px] ml-auto mr-4 ">
-      <AnimatedText wrapperClass="gap-x-1 h-auto  flex-wrap" wordsClass='flex h-fit w-fit ' variant="fadeIn" className='text-2xl sm:text-3xl md:text-5xl  md:mb-[5px] '>
+      <AnimatedText wrapperClass="gap-x-1 h-auto  flex-wrap" wordsClass='flex h-fit w-fit overflow-visible' variant="scaleOut" className='text-2xl sm:text-3xl md:text-5xl  '>
           {text}
         </AnimatedText>
       </div>

@@ -1,13 +1,12 @@
 import React from 'react'
 import aboutImage from '../assets/about.jpg'
-import { useTransform,motion, useMotionValueEvent, useSpring } from 'framer-motion'
+import { useTransform,motion} from 'framer-motion'
 
 const Page2 = ({ progress, size }) => {
-    const springProgress = useSpring(progress, { stiffness: 100, damping: 30, restDelta: 0.001, });
+ 
     const backgroundPos = useTransform(progress, [0, 20], ['0%', '60%'])
-  
 
-  return (
+    return (
       <motion.div className='page bg-inherit  grid  sm:grid-cols-[1.6fr,3fr] gap-20 px-0 sm:px-10 md:px-28 h-fit   sm:h-screen  sm:min-w-screen sm:max-w-[100vw] shrink-0 overflow-hidden pb-10 sm:pb-0'>
           <motion.div className={`bg-no-repeat bg-cover min-h-[500px] sm:min-w-[400px] `} style={{backgroundImage:`url(${aboutImage})`,backgroundPositionX:backgroundPos}}></motion.div>
           <div className="about self-center px-3 sm:px-0">
@@ -15,7 +14,7 @@ const Page2 = ({ progress, size }) => {
                 <p className='text-xl sm:text-2xl leading-1'>Hello, I'm Uday Pratap, a dedicated Software Engineer with a passion for creating intuitive, engaging,
                     and high-performing websites. With expertise in front-end and back-end development, I transform
                     ideas into functional, beautiful digital solutions.</p>
-                <div className="flex gap-5 sm:gap-10 mt-10">
+                <div  className="flex gap-5 sm:gap-10 mt-10">
                     <div >
                         <p className='font-semibold'>WHAT I DO</p>
                         <p className='leading-[1.4]' ><span className='font-semibold' >Front-End Development:</span> Crafting visually appealing ,

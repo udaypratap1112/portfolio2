@@ -14,14 +14,17 @@ const Navbar = () => {
 
   function navigate(percentage) {
     const container = document.querySelector('.hero')
-    const scrollHeight = container.scrollHeight - container.clientHeight;
+    if (container) {
+      const scrollHeight = container.scrollHeight - container.clientHeight;
     const scrollPosition = (percentage / 100) * scrollHeight;
    container.scrollTo({ top:scrollPosition})
+    }
+    
   }
 
   return (
       <div className='fixed top-0 left-0 w-screen h-14 z-50 dark:text-text-dark flex justify-between items-center px-3 sm:px-10 pr-6  '>
-            <h1 className="navLogo text-4xl italic font-bold "onClick={()=>{navigate(0)}} >
+            <h1 className="navLogo text-2xl sm:text-4xl italic font-bold "onClick={()=>{navigate(0)}} >
             <span>u</span><span>d</span><span>a</span><span>y</span>
           </h1>
           <div className="navlinks text-sm sm:text-base flex gap-3 sm:gap-5 font-medium">
