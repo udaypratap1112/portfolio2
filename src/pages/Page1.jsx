@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import {fullMaskRight,fullMaskBottom} from '../utils/mask'
-import { useTransform } from "framer-motion";
+import { useTransform,motion } from "framer-motion";
 import { AnimatedText,TypeWriter, } from 'pratap-ui';
   const text = "Crafting digital experiences that seamlessly blend art and design to create visually stunning ,innovative and user-friendly creations.";
 
@@ -47,13 +47,13 @@ const Page1 = ({ progress,size }) => {
         
       
       <div className="relative flex flex-col sm:flex-row sm:items-center gap-0 sm:gap-5 md:gap-8">
-        <div className="order-2 sm:order-1 logo text-9xl text-[8.2rem] sm:text-[200px] md:text-[350px] xl:text-[400px] italic font-bold ">
+        <motion.div initial={{ y:100,opacity:0 }} whileInView={{ y:0,opacity:1,transition:{duration:0.8,ease:'linear'}}} viewport={{once:true}} className="order-2 sm:order-1 logo text-9xl text-[8.2rem] sm:text-[200px] md:text-[350px] xl:text-[400px] italic font-bold ">
           <span>u</span>
           <span>d</span>
           <span>a</span>
           <span>y</span>
-        </div>
-        <div className="order-1 h-fit rounded-sm text-sm sm:text-xl py-1 sm:py-2 font-semibold  px-2 sm:px-5   ">Local time { time}<br/>GMT(+5:30)</div>
+        </motion.div>
+        <motion.div initial={{ y:20,opacity:0 }} whileInView={{ y:0,opacity:1,transition:{duration:0.8,ease:'linear',delay:0.5}}} viewport={{once:true}}  className="order-1 h-fit rounded-sm text-sm sm:text-xl py-1 sm:py-2 font-semibold  px-2 sm:px-5   ">Local time { time}<br/>GMT(+5:30)</motion.div>
       </div>
     </div>
   );

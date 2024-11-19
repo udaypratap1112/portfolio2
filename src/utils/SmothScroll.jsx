@@ -4,7 +4,7 @@ function SmoothScrolling({ children }) {
   // lenis options for configuration
   const lenisOptions = {
     lerp: 0.05,
-    duration: 0.5,
+    duration: 0.3,
     smoothTouch: true, //smooth scroll for touch devices
     smooth: true,
   };

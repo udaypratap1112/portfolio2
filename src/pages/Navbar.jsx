@@ -28,9 +28,9 @@ const Navbar = () => {
             <span>u</span><span>d</span><span>a</span><span>y</span>
           </h1>
           <div className="navlinks text-sm sm:text-base flex gap-3 sm:gap-5 font-medium">
-            <p onClick={()=>{navigate(0)}}>HOME</p>
-            <p onClick={()=>{navigate(40)}}>WORK</p>
-            <p onClick={()=>{navigate(100)}}>CONTACT</p>
+            <p className='select-none' onClick={()=>{navigate(0)}}>HOME</p>
+            <p className='select-none'  onClick={()=>{navigate(40)}}>WORK</p>
+            <p className='select-none'  onClick={()=>{navigate(100)}}>CONTACT</p>
           </div>
           <div className="themeSelector flex items-center" onClick={toogleTheme}>
             <p ref={theme}  className='mr-2 font-medium hidden sm:block'>MODE</p>
