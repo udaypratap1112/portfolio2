@@ -11,6 +11,9 @@ export default defineConfig({
       manifest: {
         name: 'React Vite PWA',
         short_name: 'ReactPWA',
+        start_url: "/",
+        display: "standalone",
+        background_color: "#ffffff",
         description: 'A React app with PWA capabilities using Vite',
         theme_color: '#ffffff',
         icons: [
