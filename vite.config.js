@@ -28,7 +28,24 @@ export default defineConfig({
             type: 'image/png'
           }
         ]
-      }
+      },
+      workbox: {
+        // Enable service worker caching and strategies
+        globPatterns: ['**/*.{html,js,css,png,jpg,jpeg,svg,ico}'],
+        runtimeCaching: [
+          {
+            urlPattern: /.*\.(?:png|jpg|jpeg|svg|css|js)/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'assets-cache',
+              expiration: {
+                maxEntries: 100,
+                maxAgeSeconds: 60 * 60 * 24, // Cache for 24 hours
+              },
+            },
+          },
+        ],
+      },
     })
   ],
 })
