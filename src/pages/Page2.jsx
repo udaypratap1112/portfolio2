@@ -15,7 +15,7 @@ const Page2 = ({ progress, size }) => {
                     and high-performing websites. With expertise in front-end and back-end development, I transform
                     ideas into functional, beautiful digital solutions.</motion.p>
                 <div  className="flex gap-5 sm:gap-10 mt-10">
-                    <motion.div initial={{ y:60,opacity:0.5 }} whileInView={{ y:0,opacity:1,transition:{duration:0.8,ease:'linear',delay:0.5}}} viewport={{once:true}} >
+                    <motion.div initial={{ y:60,opacity:0.2 }} whileInView={{ y:0,opacity:1,transition:{duration:0.8,ease:'linear',delay:0.5}}} viewport={{once:true}} >
                         <p className='font-semibold'>WHAT I DO</p>
                         <p className='leading-[1.4]' ><span className='font-semibold' >Front-End Development:</span> Crafting visually appealing ,
                             interactive user interfaces and
@@ -27,7 +27,7 @@ const Page2 = ({ progress, size }) => {
                     </motion.div>
                     <div >
 
-                        <motion.div initial={{ y:40,opacity:0.5 }} whileInView={{ y:0,opacity:1,transition:{duration:0.8,ease:'linear',delay:0.5}}} viewport={{once:true}}>
+                        <motion.div initial={{ y:40,opacity:0.2 }} whileInView={{ y:0,opacity:1,transition:{duration:0.8,ease:'linear',delay:0.5}}} viewport={{once:true}}>
                             <p className='font-semibold '>SKILLS</p>
                             <p className='leading-[1.4]'><span></span>
                                 JavaScript, TypeScript, ReactJS, Redux, Context API, Material UI,  HTML5, CSS3, Bootstrap 5, GSAP,
