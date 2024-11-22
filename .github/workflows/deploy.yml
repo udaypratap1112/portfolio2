@@ -1,0 +1,54 @@
+name: Deploy Vite React App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - pwa  # Trigger the workflow when changes are pushed to the 'pwa' branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 'latest'  # or specify a version like '16'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build the project
+      run: npm run build  # This creates the 'dist' folder
+
+    - name: Deploy to GitHub Pages (Manual)
+      run: |
+        # Ensure we're on the correct branch (pwa)
+        git checkout pwa
+
+        # Create a temporary directory for deployment
+        mkdir gh-pages
+
+        # Copy the contents of the dist folder into the new directory
+        cp -r dist/* gh-pages/
+
+        # Navigate into the gh-pages directory
+        cd gh-pages
+
+        # Initialize a new git repository
+        git init
+        git config user.name "GitHub Actions"
+        git config user.email "github-actions@github.com"
+
+        # Add all the files and commit the changes
+        git add .
+        git commit -m "Deploy to GitHub Pages"
+
+        # Add the GitHub Pages remote URL
+        git remote add origin https://github.com/${{ github.repository }}.git
+
+        # Force push the contents of the 'pwa' branch to the 'gh-pages' branch
+        git push --force origin pwa:gh-pages  # Change 'main' to 'pwa'
