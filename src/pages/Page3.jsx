@@ -42,7 +42,7 @@ const Page3 = ({ progress, size }) => {
         <motion.img style={{ scale: scale3 }} className="object-cover w-full h-full " src="https://res.cloudinary.com/dhoha33eh/image/upload/v1732005644/pexels-photo-4173266_ohqbxa.jpg" alt="" />
       </div>
       <div className="layer layer2 w-screen h-screen absolute top-0 left-0 overflow-hidden" style={{ mask: "var(--mask2)" }} >
-        <motion.img style={{scale:scale2}} className="object-cover w-full h-full" src="https://cdn.sanity.io/images/qa41whrn/prod/7b5747b392d279cc9bf9beeb81c839405627c05c-2000x694.png?w=2160&q=80&auto=format" alt="" />
+        <motion.img style={{scale:scale2}} className="object-cover w-full h-full" src="https://images.pexels.com/photos/2474507/pexels-photo-2474507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
       </div>
 
       <div className="layer layer1 w-screen h-screen absolute top-0 left-0 overflow-hidden" style={{ mask: "var(--mask1)" }} >
